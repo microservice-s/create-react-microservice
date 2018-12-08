@@ -104,6 +104,17 @@
     pad "^2.0.3"
     randomcolor "^0.5.3"
 
+"@immowelt/babel-preset-immowelt-node@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.0.tgz#e9774e4db697f5b69f58ec6c6640c550ea084cb0"
+  dependencies:
+    babel-plugin-dynamic-import-webpack "^1.0.1"
+    babel-plugin-transform-class-properties "^6.24.1"
+    babel-plugin-transform-object-rest-spread "^6.26.0"
+    babel-preset-flow "^6.23.0"
+    babel-preset-react "^6.24.1"
+    babel-runtime "6.26.0"
+
 "@immowelt/babel-preset-immowelt-node@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.1.tgz#1b447fb59f3f66dc522a453735175bc0715f12cb"
@@ -113,17 +124,6 @@
     babel-plugin-transform-object-rest-spread "6.26.0"
     babel-preset-flow "6.23.0"
     babel-preset-react "6.24.1"
-    babel-runtime "6.26.0"
-
-"@immowelt/babel-preset-immowelt-node@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@immowelt/babel-preset-immowelt-node/-/babel-preset-immowelt-node-1.1.0.tgz#e9774e4db697f5b69f58ec6c6640c550ea084cb0"
-  dependencies:
-    babel-plugin-dynamic-import-webpack "^1.0.1"
-    babel-plugin-transform-class-properties "^6.24.1"
-    babel-plugin-transform-object-rest-spread "^6.26.0"
-    babel-preset-flow "^6.23.0"
-    babel-preset-react "^6.24.1"
     babel-runtime "6.26.0"
 
 "@immowelt/babel-preset-immowelt-react@1.2.4":
@@ -737,7 +737,7 @@ babar@0.0.3:
   dependencies:
     colors "~0.6.2"
 
-babel-cli@6.26.0, babel-cli@^6.26.0:
+babel-cli@6.26.0:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-cli/-/babel-cli-6.26.0.tgz#502ab54874d7db88ad00b887a06383ce03d002f1"
   dependencies:
@@ -2742,19 +2742,18 @@ create-any-cli@1.3.3:
     meow "5.0.0"
     ora "3.0.0"
 
-create-config@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/create-config/-/create-config-1.0.4.tgz#958f1ec468256c7be0ce433d7b306dd5a2fd2a11"
+create-config@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/create-config/-/create-config-2.0.1.tgz#cd38aec90c8260c9f8cab8f20dd36d8361927687"
   dependencies:
-    "@immowelt/babel-preset-immowelt-node" "^1.1.0"
-    babel-cli "^6.26.0"
-    envalid "^4.1.1"
-    flow-copy-source "^1.2.1"
-    is-lts "^1.0.1"
-    lodash "^4.17.4"
-    log-fancy "^1.3.0"
-    node-eval "^2.0.0"
-    node-version "^1.1.0"
+    "@immowelt/babel-preset-immowelt-node" "1.1.0"
+    "@immowelt/eslint-config-immowelt-react" "2.1.1"
+    babel-cli "6.26.0"
+    debug-logger "0.4.1"
+    envalid "4.1.4"
+    lodash.merge "4.6.1"
+    lodash.omit "4.5.0"
+    node-eval "2.0.0"
 
 create-ecdh@^4.0.0:
   version "4.0.0"
@@ -3483,15 +3482,6 @@ envalid@4.1.4:
     dotenv "4.0.0"
     meant "1.0.0"
     validator "9.4.1"
-
-envalid@^4.1.1:
-  version "4.1.2"
-  resolved "https://registry.yarnpkg.com/envalid/-/envalid-4.1.2.tgz#dacaee06b058b967b1c2a6b6458c8615e6396ebe"
-  dependencies:
-    chalk "2.1.0"
-    dotenv "4.0.0"
-    meant "1.0.0"
-    validator "8.1.0"
 
 envify@^3.0.0, envify@^3.4.0:
   version "3.4.1"
@@ -4418,16 +4408,6 @@ flow-copy-source@2.0.2:
     kefir "^3.7.3"
     yargs "^12.0.1"
 
-flow-copy-source@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/flow-copy-source/-/flow-copy-source-1.2.1.tgz#705c2fa8fb29a281118e1c4b66218dec24b745ec"
-  dependencies:
-    chokidar "^1.7.0"
-    fs-extra "^3.0.1"
-    glob "^7.0.0"
-    kefir "^3.7.3"
-    yargs "^8.0.2"
-
 flow-mono-cli@1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/flow-mono-cli/-/flow-mono-cli-1.4.3.tgz#72947ccf83bb652ee2252dae23859a08f8117b1b"
@@ -4563,14 +4543,6 @@ fs-extra@7.0.0, fs-extra@^7.0.0:
   dependencies:
     graceful-fs "^4.1.2"
     jsonfile "^4.0.0"
-    universalify "^0.1.0"
-
-fs-extra@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-3.0.1.tgz#3794f378c58b342ea7dbbb23095109c4b3b62291"
-  dependencies:
-    graceful-fs "^4.1.2"
-    jsonfile "^3.0.0"
     universalify "^0.1.0"
 
 fs-extra@^4.0.1:
@@ -5867,10 +5839,6 @@ is-installed-globally@^0.1.0:
     global-dirs "^0.1.0"
     is-path-inside "^1.0.0"
 
-is-lts@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/is-lts/-/is-lts-1.0.1.tgz#648b72f821bbc5efa9482cd4cd57ad229deccf73"
-
 is-npm@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/is-npm/-/is-npm-1.0.0.tgz#f2fb63a65e4905b406c86072765a1a4dc793b9f4"
@@ -6591,12 +6559,6 @@ json5@^0.5.0, json5@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821"
 
-jsonfile@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-3.0.1.tgz#a5ecc6f65f53f662c4415c7675a0331d0992ec66"
-  optionalDependencies:
-    graceful-fs "^4.1.6"
-
 jsonfile@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz#8771aae0799b64076b76640fca058f9c10e33ecb"
@@ -7018,6 +6980,10 @@ lodash.noop@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/lodash.noop/-/lodash.noop-3.0.1.tgz#38188f4d650a3a474258439b96ec45b32617133c"
 
+lodash.omit@4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.omit/-/lodash.omit-4.5.0.tgz#6eb19ae5a1ee1dd9df0b969e66ce0b7fa30b5e60"
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -7060,7 +7026,7 @@ log-fancy@1.3.2:
     log-symbols "^2.0.0"
     supports-color "^4.2.1"
 
-log-fancy@^1.1.2, log-fancy@^1.3.0:
+log-fancy@^1.1.2:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/log-fancy/-/log-fancy-1.3.0.tgz#aa1a5d9f324bdd1799a98b95f8f0ad60461e4bb0"
   dependencies:
@@ -7679,7 +7645,7 @@ nocache@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/nocache/-/nocache-2.0.0.tgz#202b48021a0c4cbde2df80de15a17443c8b43980"
 
-node-eval@^2.0.0:
+node-eval@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/node-eval/-/node-eval-2.0.0.tgz#ae1d1299deb4c0e41352f9528c1af6401661d37f"
   dependencies:
@@ -7789,7 +7755,7 @@ node-releases@^1.0.0-alpha.11:
   dependencies:
     semver "^5.3.0"
 
-node-version@^1.0.0, node-version@^1.1.0:
+node-version@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/node-version/-/node-version-1.1.0.tgz#f437d7ba407e65e2c4eaef8887b1718ba523d4f0"
 
@@ -11114,10 +11080,6 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "~1.0.0"
     spdx-expression-parse "~1.0.0"
-
-validator@8.1.0:
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/validator/-/validator-8.1.0.tgz#89cf6b512ff71eba886afd8d10d47f8dc800eac0"
 
 validator@9.4.1:
   version "9.4.1"
