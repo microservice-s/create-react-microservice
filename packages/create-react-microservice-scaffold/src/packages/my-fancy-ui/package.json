@@ -55,7 +55,7 @@
     "enzyme-adapter-react-16": "1.7.1",
     "enzyme-to-json": "3.3.5",
     "eslint": "5.10.0",
-    "flow-bin": "0.69.0",
+    "flow-bin": "0.89.0",
     "flow-typed": "2.4.0",
     "jest": "23.6.0",
     "jest-react-redux": "1.0.4",
